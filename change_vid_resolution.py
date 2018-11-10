@@ -1,4 +1,7 @@
-#supports one level of directory structure
+'''
+Script to change video resolution by traversing folders using ffmpeg module
+Max Depth - 1 folder level 
+'''
 from os import listdir
 from subprocess import call
 import os

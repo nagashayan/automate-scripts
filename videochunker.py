@@ -1,3 +1,8 @@
+'''
+Script to automatically chunk large video into 15 sec small video files using 
+ffmpeg
+'''
+
 import os
 
 start = 0

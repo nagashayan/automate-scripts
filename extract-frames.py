@@ -1,5 +1,6 @@
-import sys
-import argparse
+'''
+Script to extract frames out of video file and save as JPEG images
+'''
 
 import cv2
 print(cv2.__version__)
@@ -11,13 +12,13 @@ def extractImages(pathIn, pathOut):
     while success:
       success,image = vidcap.read()
       print ('Extracting frame: ', count)
-      cv2.imwrite( pathOut + "frame%d.jpg" % count, image)     # save frame as JPEG file
+      # Save frame as JPEG file
+      cv2.imwrite( pathOut + "frame%d.jpg" % count, image) 
       count += 1
 
 if __name__=="__main__":
     print("starting")
-    
-    input = "/Users/nagashayanaramamurthy/output.avi"
-    output = "/Users/nagashayanaramamurthy/output/"
-
+    input = "output.avi"
+    # Create dir called output
+    output = "output/"
     extractImages(input, output)
